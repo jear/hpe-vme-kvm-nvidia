@@ -4,10 +4,10 @@
     
 -    Goal having nvidia T4 in pt
 
-- VM has ubuntu 22.04
-- host is DL360pGen8
-  -    BIOS has VFIO set to on
-- Grub
+  - VM has ubuntu 22.04
+  - host is DL360pGen8
+    -    BIOS has VFIO set to on
+  - Grub
 ```
 GRUB_CMDLINE_LINUX="intel_iommu=on iommu=pt initcall_blacklist=sysfb_init pcie_acs_override=downstream pcie_acs_overrid=multifunction nofb nomodeset video=vesafb:off initcall_blacklist=sysfb_init"
 
