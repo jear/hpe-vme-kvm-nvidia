@@ -71,6 +71,7 @@ ubuntu@worker-vme-gpu-1:~$ virsh list
    - nvidia-smi
    - docker + nvidia runtime installed
 ```
+ubuntu@ubuntu-MVM:~$ sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
 Tue May 27 11:32:06 2025       
 +---------------------------------------------------------------------------------------+
 | NVIDIA-SMI 535.230.02             Driver Version: 535.230.02   CUDA Version: 12.2     |
