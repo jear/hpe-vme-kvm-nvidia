@@ -4,7 +4,8 @@
     
 -    Goal having nvidia T4 in pt
 
-  - VM has ubuntu 22.04
+  - host has ubuntu 22.04
+  - no nvidia driver installed 
   - host is DL360pGen8
     -    BIOS has VFIO set to on
   - Grub
@@ -14,11 +15,12 @@ GRUB_CMDLINE_LINUX="intel_iommu=on iommu=pt initcall_blacklist=sysfb_init pcie_a
 sudo update-grub
 ```
 
+  - initramfs
+  - 
 ```
  sudo tee /etc/modules-load.d/ipmi.conf <<< "ipmi_msghandler"     && sudo tee /etc/modprobe.d/blacklist-nouveau.conf <<< "blacklist nouveau"     && sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf <<< "options nouveau modeset=0"
 ```
 
-  - initramfs 
 ```
  lspci -nnk | grep -i nvidia
 07:00.0 3D controller [0302]: NVIDIA Corporation TU104GL [Tesla T4] [10de:1eb8] (rev a1)
@@ -33,6 +35,8 @@ sudo update-initramfs -u
 sudo reboot
 ```
 
+  - VM has ubuntu 22.04
+  - adding the nvidia board in pt to the VM with virt manager installed on the host
 ```
 virt-manager
 ```
