@@ -36,7 +36,6 @@ sudo reboot
 ```
 
 # on the VM side ...
-https://documentation.ubuntu.com/server/how-to/graphics/install-nvidia-drivers/index.html
   - VM has ubuntu 22.04
   - adding the nvidia board in pt to the VM with virt manager installed on the host
 ```
@@ -65,4 +64,8 @@ ubuntu@worker-vme-gpu-1:~$ virsh list
 
 
 ```
+
+# on the VM side ...
+
+
 
