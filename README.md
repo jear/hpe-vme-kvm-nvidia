@@ -41,5 +41,26 @@ sudo reboot
 virt-manager
 ```
 
+```
+ubuntu@worker-vme-gpu-1:~$ virsh list
+ Id   Name           State
+------------------------------
+ 2    vme-kvm-gpu    running
+ 3    lb-adc-kvm-1   running
+```
 
+  -  virsh dumpxml vme-kvm-gpu
+```
+
+    <hostdev mode='subsystem' type='pci' managed='yes'>
+      <driver name='vfio'/>
+      <source>
+        <address domain='0x0000' bus='0x07' slot='0x00' function='0x0'/>
+      </source>
+      <alias name='hostdev0'/>
+      <address type='pci' domain='0x0000' bus='0x07' slot='0x00' function='0x0'/>
+    </hostdev>
+
+
+```
 
