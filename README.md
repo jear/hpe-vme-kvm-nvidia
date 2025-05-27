@@ -18,6 +18,7 @@ sudo update-grub
  sudo tee /etc/modules-load.d/ipmi.conf <<< "ipmi_msghandler"     && sudo tee /etc/modprobe.d/blacklist-nouveau.conf <<< "blacklist nouveau"     && sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf <<< "options nouveau modeset=0"
 ```
 
+  - initramfs 
 ```
  lspci -nnk | grep -i nvidia
 07:00.0 3D controller [0302]: NVIDIA Corporation TU104GL [Tesla T4] [10de:1eb8] (rev a1)
