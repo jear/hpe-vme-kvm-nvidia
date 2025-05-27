@@ -35,6 +35,7 @@ sudo update-initramfs -u
 sudo reboot
 ```
 
+# on the VM side ...
   - VM has ubuntu 22.04
   - adding the nvidia board in pt to the VM with virt manager installed on the host
 ```
