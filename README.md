@@ -1,8 +1,8 @@
 # hpe-vme-kvm-nvidia
 
     # https://enterprise-support.nvidia.com/s/article/understanding-the-iommu-linux-grub-file-configuration
-
-Goal having nvidia T4 in pt
+    
+-    Goal having nvidia T4 in pt
 
 # VM has ubuntu 22.04
 # host is DL360pGen8
