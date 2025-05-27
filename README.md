@@ -65,7 +65,9 @@ ubuntu@worker-vme-gpu-1:~$ virsh list
 
 ```
 
-# on the VM side ...
-
+# inside the VM ...
+   - installed driver
+   - reboot
+   - nvidia-smi
 
 
