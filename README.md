@@ -1,1 +1,40 @@
 # hpe-vme-kvm-nvidia
+
+https://enterprise-support.nvidia.com/s/article/understanding-the-iommu-linux-grub-file-configuration
+
+Goal having nvidia T4 in pt
+
+# VM has ubuntu 22.04
+# host is DL360pGen8
+#    BIOS has VFIO set to on
+# Grub
+```
+GRUB_CMDLINE_LINUX="intel_iommu=on iommu=pt initcall_blacklist=sysfb_init pcie_acs_override=downstream pcie_acs_overrid=multifunction nofb nomodeset video=vesafb:off initcall_blacklist=sysfb_init"
+
+sudo update-grub
+```
+
+```
+ sudo tee /etc/modules-load.d/ipmi.conf <<< "ipmi_msghandler"     && sudo tee /etc/modprobe.d/blacklist-nouveau.conf <<< "blacklist nouveau"     && sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf <<< "options nouveau modeset=0"
+```
+
+```
+ lspci -nnk | grep -i nvidia
+07:00.0 3D controller [0302]: NVIDIA Corporation TU104GL [Tesla T4] [10de:1eb8] (rev a1)
+        Subsystem: NVIDIA Corporation TU104GL [Tesla T4] [10de:12a2]
+        Kernel modules: nvidiafb, nouveau
+
+sudo cat /etc/modprobe.d/vfio.conf
+options vfio-pci ids=10de:1eb8
+
+sudo update-initramfs -u
+
+sudo reboot
+```
+
+```
+virt-manager
+```
+
+
+
