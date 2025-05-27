@@ -16,7 +16,7 @@ sudo update-grub
 ```
 
   - initramfs
-  - 
+
 ```
  sudo tee /etc/modules-load.d/ipmi.conf <<< "ipmi_msghandler"     && sudo tee /etc/modprobe.d/blacklist-nouveau.conf <<< "blacklist nouveau"     && sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf <<< "options nouveau modeset=0"
 ```
