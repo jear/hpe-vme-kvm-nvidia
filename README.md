@@ -1,6 +1,6 @@
 # hpe-vme-kvm-nvidia
 
-  - OVS cheat sheet
+  - OVS cheat sheet ( not used here but always good to know )
 ```
 sudo ovs-vsctl show
 sudo ovs-ofctl show mgmt
