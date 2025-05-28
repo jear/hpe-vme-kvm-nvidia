@@ -1,10 +1,11 @@
 # hpe-vme-kvm-nvidia
 
-  -OVS cheat sheet
+  - OVS cheat sheet
 ```
-    sudo ovs-ofctl show mgmt
-    sudo ovs-dpctl dump-flows
-    sudo ovs-appctl bridge/dump-flows mgmt
+sudo ovs-vsctl show
+sudo ovs-ofctl show mgmt
+sudo ovs-dpctl dump-flows
+sudo ovs-appctl bridge/dump-flows mgmt
 ```
 
     # https://enterprise-support.nvidia.com/s/article/understanding-the-iommu-linux-grub-file-configuration
