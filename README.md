@@ -1,12 +1,5 @@
 # hpe-vme-kvm-nvidia
 
-  - OVS cheat sheet ( not used here but always good to know )
-```
-sudo ovs-vsctl show
-sudo ovs-ofctl show mgmt
-sudo ovs-dpctl dump-flows
-sudo ovs-appctl bridge/dump-flows mgmt
-```
 
     # https://enterprise-support.nvidia.com/s/article/understanding-the-iommu-linux-grub-file-configuration
     
@@ -45,10 +38,10 @@ sudo reboot
 
 # on the VM side ...
   - VM has ubuntu 22.04
-  - adding the nvidia board in pt to the VM with virt manager installed on the host
-```
-virt-manager
-```
+  - Please do not add the nvidia board in pt to the VM with virt manager installed on the host
+  -   use the attach/detach feature in HPE VME
+
+# Internals
 
 ```
 ubuntu@worker-vme-gpu-1:~$ virsh list
