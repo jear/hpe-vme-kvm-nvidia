@@ -77,8 +77,8 @@ ubuntu@worker-vme-gpu-1:~$ virsh list
    - installed driver
    - reboot
    - nvidia-smi
-   - miniconda https://www.anaconda.com/docs/getting-started/miniconda/install#linux
-   - docker + docker-compose + nvidia runtime installed https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-the-nvidia-container-toolkit 
+   - nvidia runtime installed https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-the-nvidia-container-toolkit
+   - docker + docker-compose
    - [ open-webui with ollama and GPU ](https://github.com/open-webui/open-webui?tab=readme-ov-file#installing-open-webui-with-bundled-ollama-support) 
 ```
 ubuntu@ubuntu-MVM:~$ sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
@@ -106,6 +106,7 @@ Tue May 27 11:32:06 2025
 
 docker run -d -p 3000:8080 --gpus=all -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama
 
+# To be tested with Docker rootless
 
 
 ```
