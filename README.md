@@ -77,7 +77,9 @@ ubuntu@worker-vme-gpu-1:~$ virsh list
    - installed driver
    - reboot
    - nvidia-smi
-   - docker + nvidia runtime installed
+   - miniconda https://www.anaconda.com/docs/getting-started/miniconda/install#linux
+   - docker + docker-compose + nvidia runtime installed
+   - [ open-webui with ollama and GPU ](https://github.com/open-webui/open-webui?tab=readme-ov-file#installing-open-webui-with-bundled-ollama-support) 
 ```
 ubuntu@ubuntu-MVM:~$ sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
 Tue May 27 11:32:06 2025       
